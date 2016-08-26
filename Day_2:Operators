@@ -1,0 +1,13 @@
+mealCost = input()
+tipPercent = input()
+taxPercent = input()
+
+mealCost0 = float(mealCost)
+tipPercent0 = float(tipPercent) / 100
+taxPercent0 = float (taxPercent) / 100
+
+#print(mealCost0, tipPercent0, taxPercent0)
+
+totalCost = round(mealCost0 + (mealCost0 * tipPercent0) + (mealCost0 * taxPercent0))
+
+print("The total meal cost is " + str(totalCost) + " dollars.")
