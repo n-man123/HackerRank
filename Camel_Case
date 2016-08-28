@@ -1,0 +1,8 @@
+#!/bin/python3
+
+import sys
+import re
+
+s = input().strip()
+mylist = re.split("[A-Z]+", s)
+print(len(mylist))
