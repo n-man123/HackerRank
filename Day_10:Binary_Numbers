@@ -1,0 +1,14 @@
+import sys
+
+ones_len = 0
+max_len = 0
+y = int(input().strip())
+x = str(bin(y))[2:]
+for i in range(len(x)):
+    if x[i] == '1':
+        ones_len += 1
+        if ones_len > max_len:
+            max_len = ones_len
+    else:
+        ones_len = 0
+print(max_len)
