@@ -1,0 +1,16 @@
+T = int(input())
+words = []
+for i in range(T):
+    S = input()
+    oddString = ""
+    evenString = ""
+    for j in range(0, len(S), 2):
+        oddString += S[j]
+        if j+1 < len(S):
+            evenString += S[j+1]
+    words.append(oddString)
+    words.append(evenString)
+    
+wordLed=len(words)
+for i in range(0,wordLed, 2):
+    print(words[i]+" "+words[i+1])
