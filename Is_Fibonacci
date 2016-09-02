@@ -1,0 +1,22 @@
+import math
+
+def is_fibonacci(n):
+    phi = 0.5 + 0.5 * math.sqrt(5.0)
+    a = phi * n
+    return n == 0 or abs(round(a) - a) < 1.0 / n
+
+_numbers_cnt = 0
+_numbers_cnt = int(input())
+_numbers_i=0
+_numbers = []
+while _numbers_i < _numbers_cnt:
+    _numbers_item = int(input());
+    _numbers.append(_numbers_item)
+    _numbers_i+=1
+_numbers_i = 0
+while _numbers_i < _numbers_cnt:
+    if is_fibonacci(_numbers[_numbers_i]):
+        print("IsFibo")
+    else:
+        print("IsNotFibo")
+    _numbers_i+=1
