@@ -1,0 +1,15 @@
+def BubbleSort():
+    local_swaps = 0
+    for i in range(len(a)):
+        for j in range(len(a)-1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+                local_swaps += 1
+    return a, local_swaps
+ 
+n = int(input().strip())
+a = [int(a_temp) for a_temp in input().strip().split(' ')]
+a, swaps = BubbleSort()
+print("Array is sorted in {} swaps.".format(swaps))
+print("First Element: {}".format(a[0]))
+print("Last Element: {}".format(a[-1]))
