@@ -1,2 +1,2 @@
 # HackerRank
-Various Python programs (but a few non-Python ones as well)
+Various Python programs (and a few non-Python ones as well)
