@@ -1,0 +1,26 @@
+"""
+Da = Actual Day
+Ma = Actual Month
+Ya = Actual Year
+De = Expected Day
+Me = Expected Month
+Ye = Expected Year
+"""
+
+Da, Ma, Ya = input().split()
+De, Me, Ye = input().split()
+
+if int(Ya) > int(Ye):
+    print('10000')
+elif int(Ya) < int(Ye):
+    print('0')
+elif int(Ya) == int(Ye):
+    if int(Ma) > int(Me):
+        print(str(500 * (int(Ma) - int(Me))))
+    elif int(Ma) < int(Me):
+        print('0')
+    elif int(Ma) == int(Me):
+        if int(Da) > int(De):
+            print(str(15 * (int(Da) - int(De))))
+        elif int(Da) <= int(De):
+            print('0')
