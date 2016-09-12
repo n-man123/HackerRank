@@ -1,0 +1,14 @@
+import itertools
+ourList = []
+
+t = int(input().strip())
+for a0 in range(t):
+    n,k = input().strip().split(' ')
+    n,k = [int(n),int(k)]
+    maxBit = 0
+    for i in itertools.combinations(range(1, n), 2):
+        bit = i[0] & i[1]
+        if bit > maxBit and bit < k:
+            maxBit = bit
+    ourList.append(str(maxBit))
+print("\n".join(ourList))
