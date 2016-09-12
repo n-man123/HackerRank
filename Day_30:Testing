@@ -1,0 +1,25 @@
+import random
+
+testcases = 11
+print(testcases)
+nums = set()
+for i in range(testcases):
+    n = random.randint(1,200)
+    while n in nums:
+        n = random.randint(1,200)
+    nums.add(n)
+    k = random.randint(1,n)
+    arr = []
+    for i in range(n):      
+        if i == 0:
+            time = 0
+        elif i == 1:
+            time = random.randint(-1000,0)
+        elif i == 2:
+            time = random.randint(0,1000)    
+        else:
+            time = random.randint(-1000,1000)
+        arr.append(time)
+        
+    print(n, k)
+    print(' '.join(str(i) for i in arr))
