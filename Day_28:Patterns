@@ -1,0 +1,9 @@
+ourList = []
+
+N = int(input().strip())
+for a0 in range(N):
+    firstName,emailID = input().strip().split(' ')
+    firstName,emailID = [str(firstName),str(emailID)]
+    if '@gmail.com' in emailID:
+        ourList.append(firstName)
+print("\n".join(sorted(ourList)))
